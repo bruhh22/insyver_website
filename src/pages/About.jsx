@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import Reveal from '../components/ui/Reveal';
 import SectionHeader from '../components/ui/SectionHeader';
-import Button from '../components/ui/Button';
-import { ArrowRight } from 'lucide-react';
+// import Button from '../components/ui/Button';
+// import { ArrowRight } from 'lucide-react';
 
 const About = ({ setPage }) => {
     const { isDark } = useTheme();

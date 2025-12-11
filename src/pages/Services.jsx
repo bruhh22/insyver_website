@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { useTheme } from '../context/ThemeContext';
+//import { useTheme } from '../context/ThemeContext';
 import SectionHeader from '../components/ui/SectionHeader';
 import Reveal from '../components/ui/Reveal';
 import ServiceCard from '../components/services/ServiceCard';
 import { SERVICES_DATA } from '../data/content';
 
 const ServicesList = ({ setPage, setServiceId }) => {
-    const { isDark } = useTheme();
+    //const { isDark } = useTheme();
     useEffect(() => window.scrollTo(0, 0), []);
 
     return (

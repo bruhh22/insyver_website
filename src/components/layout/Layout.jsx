@@ -133,7 +133,7 @@ const Layout = ({ children, setPage, page }) => {
                             <p className={`mb-8 max-w-sm leading-relaxed ${isDark ? 'text-slate-500' : 'text-slate-600'}`}>Delivering integrated, intelligent, and secure digital solutions for modern enterprises. Intelligent Systems. Ever Evolving.</p>
                             <div className="flex space-x-6">
                                 {[Facebook, Linkedin, Twitter, Instagram].map((Icon, i) => (
-                                    <a key={i} href="#" className={`transition-all duration-300 hover:-translate-y-1 ${isDark ? 'text-slate-500 hover:text-white' : 'text-slate-400 hover:text-blue-600'}`}><Icon className="w-5 h-5" /></a>
+                                    <a key={i} href="/" className={`transition-all duration-300 hover:-translate-y-1 ${isDark ? 'text-slate-500 hover:text-white' : 'text-slate-400 hover:text-blue-600'}`}><Icon className="w-5 h-5" /></a>
                                 ))}
                             </div>
                         </div>
