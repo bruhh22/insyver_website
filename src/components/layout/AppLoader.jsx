@@ -22,9 +22,19 @@ const AppLoader = ({ onComplete }) => {
                         onError={(e) => { e.target.style.display = 'none'; }}
                     />
                     {/* Brand Name for Loader */}
-                    <div className="flex flex-col items-center justify-center gap-3">
+                    {/* <div className="flex flex-col items-center justify-center gap-3">
                         <span className="text-white text-3xl font-extrabold tracking-tight leading-none">Insyver</span>
                         <span className="text-slate-400 text-xs font-bold tracking-[0.3em] uppercase">Technologies</span>
+                    </div> */}
+
+                    {/* Brand Name for Loader */}
+                    <div className="flex flex-col items-center justify-center -space-y-1">
+                        <span className="text-white text-3xl font-extrabold tracking-tight leading-none font-old-standard mb-2">
+                            Insyver Technologies
+                        </span>
+                        <span className="text-slate-400 text-xs font-bold tracking-[0.2em] font-joly-text">
+                            (OPC) Pvt. Ltd.
+                        </span>
                     </div>
                 </div>
                 <div className="h-1 w-48 bg-slate-800 rounded-full overflow-hidden mx-auto">

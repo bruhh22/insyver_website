@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
+/* --- 1. Import the Font from Google --- */
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* --- 2. Define the Font Classes --- */
+.font-old-standard {
+  font-family: 'Old Standard TT', serif;
+}
+
+.font-joly-text {
+  font-family: 'Joly Text', serif; /* Note: Ensure you have this font loaded if it's local */
+}
 :root {
   --ease-elastic: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

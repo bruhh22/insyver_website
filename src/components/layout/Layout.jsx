@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Facebook, Linkedin, Twitter, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { Menu, X, Sun, Moon, Facebook, Linkedin, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import Button from '../ui/Button';
+import { FaXTwitter } from "react-icons/fa6";
 
 const LOGO_IMG_SRC = "/assets/transparent_main_logo_(2).png";
 
@@ -22,6 +23,13 @@ const Layout = ({ children, setPage, page }) => {
         { id: 'services', label: 'Services' },
         { id: 'contact', label: 'Contact' },
     ];
+    const socialIcons = [
+        Facebook,
+        Linkedin,
+        FaXTwitter,
+        Instagram
+    ];
+
 
     return (
         <div className={`min-h-screen font-sans selection:bg-blue-500/30 ${isDark ? 'bg-[#050A18] text-slate-200' : 'bg-[#F8FAFC] text-slate-800'}`}>
@@ -44,13 +52,27 @@ const Layout = ({ children, setPage, page }) => {
                             />
                         </div>
 
-                        <div className="flex flex-col items-start justify-center -space-y-0.5">
+                        {/* <div className="flex flex-col items-start justify-center -space-y-0.5">
                             <span className={`text-lg md:text-xl font-extrabold tracking-tight leading-none ${isDark ? 'text-white' : 'text-slate-900'}`}>
                                 Insyver
                             </span>
                             <span className={`text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                                 Technologies
                             </span>
+                        </div> */}
+
+                        <div className={`flex flex-col items-center justify-center ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                            <h1 className="text-lg md:text-2xl font-bold leading-none tracking-tight font-old-standard">
+                                Insyver Technologies
+                            </h1>
+                            {/* <div className="flex flex-col leading-none mt-1"> */}
+                            <span className={`text-[10px] md:text-xs font-bold tracking-wide font-joly-text ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
+                                (OPC) Pvt. Ltd.
+                            </span>
+                            {/* <span className={`text-[9px] md:text-[10px] font-bold tracking-widest uppercase font-old-standard ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
+                                    An ICT Infrastructure Company
+                                </span> */}
+
                         </div>
                     </div>
 
@@ -121,20 +143,37 @@ const Layout = ({ children, setPage, page }) => {
                         <div className="md:col-span-2">
                             <div className="flex items-center gap-3 mb-6">
                                 <img src={LOGO_IMG_SRC} alt="Insyver Logo" className="h-8 w-auto" onError={(e) => { e.target.style.display = 'none'; }} />
-                                <div className="flex flex-col items-start justify-center -space-y-0.5">
+                                {/* <div className="flex flex-col items-start justify-center -space-y-0.5">
                                     <span className={`text-lg font-extrabold tracking-tight leading-none ${isDark ? 'text-white' : 'text-slate-900'}`}>
                                         Insyver
                                     </span>
                                     <span className={`text-[10px] font-bold tracking-[0.2em] uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                                         Technologies
                                     </span>
+                                </div> */}
+
+                                <div className={`flex flex-col items-center justify-center ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                                    <span className="text-lg font-bold leading-none tracking-tight font-old-standard mb-1">
+                                        Insyver Technologies
+                                    </span>
+                                    <div className="flex flex-col leading-none mt-0.5">
+                                        <span className={`text-[9px] font-bold tracking-wide font-joly-text ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                                            (OPC) Pvt. Ltd.
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                             <p className={`mb-8 max-w-sm leading-relaxed ${isDark ? 'text-slate-500' : 'text-slate-600'}`}>Delivering integrated, intelligent, and secure digital solutions for modern enterprises. Intelligent Systems. Ever Evolving.</p>
                             <div className="flex space-x-6">
-                                {[Facebook, Linkedin, Twitter, Instagram].map((Icon, i) => (
+                                {/* {[Facebook, Linkedin, Twitter, Instagram].map((Icon, i) => (
                                     <a key={i} href="/" className={`transition-all duration-300 hover:-translate-y-1 ${isDark ? 'text-slate-500 hover:text-white' : 'text-slate-400 hover:text-blue-600'}`}><Icon className="w-5 h-5" /></a>
+                                ))} */}
+                                {socialIcons.map((Icon, i) => (
+                                    <a key={i} href="/" className="transition-all duration-300 hover:-translate-y-1">
+                                        <Icon className="w-5 h-5" />
+                                    </a>
                                 ))}
+
                             </div>
                         </div>
 
@@ -165,7 +204,7 @@ const Layout = ({ children, setPage, page }) => {
                     </div>
 
                     <div className={`border-t pt-8 flex flex-col md:flex-row justify-between items-center ${isDark ? 'border-slate-800 text-slate-600' : 'border-slate-200 text-slate-500'}`}>
-                        <p>&copy; 2025 Insyver Technologies. All rights reserved.</p>
+                        <p>&copy; 2025 Insyver Technologies, (OPC) Pvt. Ltd. All rights reserved.</p>
                         <div className="flex gap-8 mt-4 md:mt-0">
                             <button onClick={() => setPage('privacy')} className="hover:text-blue-600 transition-colors">Privacy</button>
                             <button onClick={() => setPage('terms')} className="hover:text-blue-600 transition-colors">Terms</button>

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { ChevronRight, Zap, CheckCircle } from 'lucide-react';
+import { ChevronRight, Zap, CheckCircle, Download } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import SectionHeader from '../components/ui/SectionHeader';
 import Reveal from '../components/ui/Reveal';
 import Button from '../components/ui/Button';
-import { SERVICES_DATA } from '../data/content';
+import { DEFAULT_SERVICE_IMG, SERVICES_DATA } from '../data/content';
 
 const ServiceDetail = ({ serviceId, setPage }) => {
     const { isDark } = useTheme();
@@ -14,15 +14,16 @@ const ServiceDetail = ({ serviceId, setPage }) => {
     if (!service) return null;
 
     return (
-        <div className="min-h-screen animate-page-enter">
-            {/* 1. CINEMATIC HERO (Updated Structure for Alignment) */}
-            <div className="relative min-h-[60vh] w-full overflow-hidden flex flex-col justify-center">
-                {/* Background Image - Absolute */}
-                <img src={service.image} className="absolute inset-0 w-full h-full object-cover" alt={service.title} />
-                <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-t from-[#050A18] via-[#050A18]/80 to-transparent' : 'bg-gradient-to-t from-white via-white/80 to-transparent'}`} />
+        <div className="min-h-screen animate-page-enter page-container">
+            {/* 1. CINEMATIC HERO (Updated Structure f or Alignment) */}
 
-                {/* Content Container - Padded Top to Clear Header */}
-                <div className="container mx-auto px-4 relative z-10 pt-32 pb-16">
+            {/* <div className="relative min-h-[60vh] w-full overflow-hidden flex flex-col justify-center"> */}
+            {/* Background Image - Absolute */}
+            {/* <img src={service.image} className="absolute inset-0 w-full h-full object-cover" alt={service.title} />
+                <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-t from-[#050A18] via-[#050A18]/80 to-transparent' : 'bg-gradient-to-t from-white via-white/80 to-transparent'}`} /> */}
+
+            {/* Content Container - Padded Top to Clear Header */}
+            {/* <div className="container mx-auto px-4 relative z-10 pt-32 pb-16">
                     <button onClick={() => setPage('services')} className={`mb-8 flex items-center group text-sm font-semibold tracking-wide uppercase w-fit ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                         <ChevronRight className="w-4 h-4 rotate-180 mr-2 transition-transform group-hover:-translate-x-1" /> Back to Services
                     </button>
@@ -30,10 +31,69 @@ const ServiceDetail = ({ serviceId, setPage }) => {
                         <h1 className={`text-5xl md:text-7xl font-bold mb-6 max-w-4xl tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>{service.title}</h1>
                         <p className={`text-xl md:text-2xl max-w-2xl leading-relaxed ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>{service.overview}</p>
                     </Reveal>
+                </div> */}
+            {/* </div> */}
+
+            <div className="w-full px-4 md:px-8 pb-12 pt-8">
+                <div className={`relative rounded-[2.5rem] overflow-hidden min-h-[50vh] flex flex-col justify-end p-8 md:p-16 ${isDark ? 'bg-slate-900' : 'bg-slate-100'}`}>
+                    {/* Background Image - Absolute relative to this rounded container */}
+                    <img src={service.image || DEFAULT_SERVICE_IMG}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        alt={service.title}
+                        onError={(e) => { e.target.src = DEFAULT_SERVICE_IMG; }}
+                    />
+                    <div className={`absolute inset-0 ${isDark ? 'bg-[#050A18]/60 mix-blend-multiply' : 'bg-slate-900/40 mix-blend-multiply'}`} />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${isDark ? 'from-[#050A18] via-transparent' : 'from-black/60 via-transparent'}`} />
+
+                    {/* Content */}
+                    <div className="relative z-10">
+                        <button onClick={() => setPage('services')} className={`mb-6 flex items-center group text-sm font-bold tracking-widest uppercase w-fit px-4 py-2 rounded-full backdrop-blur-md bg-white/10 text-white hover:bg-white/20 transition-all`}>
+                            <ChevronRight className="w-4 h-4 rotate-180 mr-2 transition-transform group-hover:-translate-x-1" /> Back to Services
+                        </button>
+                        <Reveal>
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 max-w-4xl tracking-tight leading-[1.1] text-white drop-shadow-lg">{service.title}</h1>
+                            <p className="text-xl md:text-2xl max-w-2xl leading-relaxed font-light text-white/90 drop-shadow-md">{service.overview}</p>
+                        </Reveal>
+
+                        {/* NEW: View Brochure Button */}
+                        <div className="mt-8 flex flex-wrap gap-4">
+                            <Button onClick={() => setPage('contact')}>
+                                Get Started
+                            </Button>
+                            <button
+                                onClick={() => window.open(service.brochureUrl || "/assets/Company_Profile.pdf", '_blank')}
+                                className={`group relative inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide transition-all duration-300 rounded-xl focus:outline-none overflow-hidden select-none border-2 backdrop-blur-md ${isDark
+                                    ? "border-white/30 text-white hover:bg-white/10 hover:border-white"
+                                    : "border-white/50 text-white hover:bg-white/20 hover:border-white"
+                                    }`}
+                            >
+                                <Download className="w-4 h-4 mr-2" />
+                                View Brochure
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-20">
+            <div className="container mx-auto px-4 ">
+
+                {service.technologies && (
+                    <div className="mb-20">
+                        <p className={`text-sm font-bold uppercase tracking-widest mb-6 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Powered By Best-in-Class Tech</p>
+                        <div className="flex flex-wrap gap-4">
+                            {service.technologies.map((tech, i) => (
+                                <Reveal key={i} delay={i * 50}>
+                                    <span className={`px-5 py-2 rounded-full text-sm font-medium border ${isDark
+                                        ? 'bg-slate-900 border-slate-700 text-slate-300'
+                                        : 'bg-white border-slate-200 text-slate-600 shadow-sm'
+                                        }`}>
+                                        {tech}
+                                    </span>
+                                </Reveal>
+                            ))}
+                        </div>
+                    </div>
+                )}
                 {/* 2. CAPABILITIES GRID (Bento Style) */}
                 <div className="mb-24">
                     <SectionHeader title="Core Capabilities" subtitle="Specialized modules designed for enterprise-grade performance." />
@@ -41,8 +101,8 @@ const ServiceDetail = ({ serviceId, setPage }) => {
                         {service.expertise.map((item, idx) => (
                             <Reveal key={idx} delay={idx * 50}>
                                 <div className={`p-8 rounded-3xl h-full border transition-all hover:-translate-y-1 hover:shadow-lg ${isDark
-                                        ? 'bg-slate-900/50 border-slate-800'
-                                        : 'bg-white border-slate-200 shadow-sm'
+                                    ? 'bg-slate-900/50 border-slate-800'
+                                    : 'bg-white border-slate-200 shadow-sm'
                                     }`}>
                                     <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600">
                                         <Zap className="w-5 h-5" />
@@ -70,6 +130,11 @@ const ServiceDetail = ({ serviceId, setPage }) => {
                                 </div>
                                 <h3 className={`text-xl font-bold mb-3 ${isDark ? 'text-white' : 'text-slate-900'}`}>{step.title}</h3>
                                 <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{step.desc}</p>
+                                {step.deliverable && (
+                                    <div className={`mt-3 text-xs font-semibold px-3 py-1.5 rounded-lg inline-block ${isDark ? 'bg-blue-900/30 text-blue-300' : 'bg-blue-50 text-blue-700'}`}>
+                                        {step.deliverable}
+                                    </div>
+                                )}
                             </Reveal>
                         ))}
                     </div>

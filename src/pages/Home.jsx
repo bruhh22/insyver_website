@@ -17,8 +17,11 @@ const Home = ({ setPage, setServiceId }) => {
             <section className="relative pt-20 pb-20 lg:pt-32 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="assets/home/home-main.jpg"
-                        className="w-full h-full object-cover transition-transform duration-[20s] animate-[pulseSoft_10s_infinite_alternate]"
+                        src={
+                            isDark
+                                ? "assets/home/home-main.jpg"
+                                : "assets/home/home-main-light.jpg"
+                        } className="w-full h-full object-cover transition-transform duration-[20s] animate-[pulseSoft_10s_infinite_alternate]"
                         alt="Technology Background"
                     />
                     <div className={`absolute inset-0 ${isDark

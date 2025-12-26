@@ -8,8 +8,8 @@ const SectionHeader = ({ title, subtitle, center = true }) => {
         <div className={`mb-16 ${center ? 'text-center' : 'text-left'}`}>
             <Reveal>
                 <div className={`inline-block mb-4 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase transition-colors ${isDark
-                        ? 'bg-blue-900/30 text-blue-300'
-                        : 'bg-blue-50 text-blue-600 border border-blue-100 shadow-sm'
+                    ? 'bg-blue-900/30 text-blue-300'
+                    : 'bg-blue-50 text-blue-600 border border-blue-100 shadow-sm'
                     }`}>
                     Excellence in IT
                 </div>
@@ -19,7 +19,9 @@ const SectionHeader = ({ title, subtitle, center = true }) => {
             </Reveal>
             {subtitle && (
                 <Reveal delay={100}>
-                    <p className={`max-w-2xl mx-auto text-lg leading-relaxed font-light transition-colors duration-700 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                    <p className={`max-w-2xl text-lg leading-relaxed font-light transition-colors duration-700
+                            ${center ? 'mx-auto text-center' : 'text-left'}
+                        ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                         {subtitle}
                     </p>
                 </Reveal>
