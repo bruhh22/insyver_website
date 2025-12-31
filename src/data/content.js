@@ -161,7 +161,7 @@ export const SERVICES_DATA = [
         shortDesc: 'High-performance enterprise networking with Wi-Fi 6, switching, and routing.',
         overview: 'As a next-generation ICT Solutions Provider, we build robust, scalable, and secure network systems that serve as the foundation of modern enterprise operations. From high-performance Wi-Fi 6 deployment to complex datacenter routing and structured cabling, we ensure your digital backbone is future-ready.',
         technologies: ['Cisco', 'Aruba', 'TP-Link Omada', 'D-Link', 'Fiber Optics'],
-        expertise: ['Enterprise Wi-Fi', 'Switching & Routing', 'Structured Cabling', 'Datacenter Setup'],
+        expertise: ['Enterprise Wi-Fi', 'Switching & Routing', 'Structured Cabling', 'Datacenter Setup', 'Network Security & Segmentation', 'Performance Optimization & Audits'],
         workflow: [
             { step: "01", title: "Infrastructure Audit", desc: "We conduct a rigorous analysis of your existing network ecosystem to identify bottlenecks and security gaps.", deliverable: "Network Assessment Report" },
             { step: "02", title: "Strategic Design", desc: "Our architects design a scalable, high-performance network topology tailored to your specific traffic patterns.", deliverable: "Network Blueprint & LLD" },
@@ -180,7 +180,7 @@ export const SERVICES_DATA = [
         shortDesc: 'Cloud migration and modernization - Azure, AWS and GCP with architecture design.',
         overview: 'Adopt the cloud with confidence. We deliver end-to-end cloud migration and modernization strategies across Azure, AWS, and GCP. Our services include hybrid cloud architecture design, disaster recovery planning, and seamless Workspace/M365 deployment.',
         technologies: ['Microsoft Azure', 'AWS', 'Google Cloud', 'Microsoft 365', 'Google Workspace'],
-        expertise: ['Cloud Migration', 'Architecture Design', 'Backup & DR', 'Hybrid Cloud Setups', 'M365 / Workspace Deployment'],
+        expertise: ['Cloud Migration', 'Architecture Design', 'Backup & DR', 'Hybrid Cloud Setups', 'M365 / Workspace Deployment', 'Cloud Cost & Security Optimization'],
         workflow: [
             { step: "01", title: "Readiness Assessment", desc: "We evaluate your applications and data dependencies to determine the most effective migration strategy.", deliverable: "Migration Readiness Report" },
             { step: "02", title: "Target Architecture", desc: "We architect a secure, compliant, and cost-efficient cloud environment tailored to your workload.", deliverable: "Cloud Architecture Diagram" },
@@ -198,7 +198,7 @@ export const SERVICES_DATA = [
         image: "assets/services/amc-managed-it.jpg",
         shortDesc: 'SLA-driven IT management with 24/7 helpdesk, proactive monitoring, patching and maintenance.',
         overview: 'Focus on your business while we manage your technology. Our SLA-driven Managed IT Services provide 24/7 helpdesk support, proactive monitoring, patch management, and complete hardware/software maintenance to ensure business continuity.',
-        expertise: ['24/7 Helpdesk', 'Monitoring & Patching', 'Infra Optimization', 'Hardware Maintenance'],
+        expertise: ['24/7 Helpdesk', 'Monitoring & Patching', 'Infra Optimization', 'Hardware Maintenance', 'Incident & Problem Management', 'Business Continuity Support'],
         technologies: ['Remote Monitoring (RMM)', 'Patch Management', 'Asset Tracking', 'Service Desk'],
         workflow: [
             { step: "01", title: "Asset Discovery", desc: "We catalogue all IT assets and establish baseline performance metrics to create a support framework.", deliverable: "Asset Inventory & SLA" },
@@ -217,7 +217,7 @@ export const SERVICES_DATA = [
         image: "assets/services/cyber-security-ethical-hacking.jpg",
         shortDesc: 'Complete cybersecurity stack with EDR/XDR, NGFW, SOC monitoring, and VAPT.',
         overview: 'In an age of constant threats, we provide a complete cybersecurity stack. From EDR/XDR and Next-Gen Firewalls to 24/7 SOC monitoring and Vulnerability Assessment (VAPT), we safeguard your digital ecosystem against evolving attacks.',
-        expertise: ['Endpoint Security', 'Firewall & SOC', 'Compliance Advisory', 'VAPT Services'],
+        expertise: ['Endpoint Security (EDR/XDR)', 'Firewall & SOC Operations', 'VAPT & Risk Assessment', 'Identity & Access Management (IAM)', 'Compliance & Security Audits', 'Incident Response & Threat Handling'],
         technologies: ['Sophos', 'Quick Heal', 'Seqrite', 'McAfee', 'Bitdefender'],
         workflow: [
             { step: "01", title: "Vulnerability Assessment", desc: "We simulate sophisticated cyberattacks to uncover weaknesses in your network and applications.", deliverable: "VAPT Report & Risk Score" },
@@ -237,7 +237,7 @@ export const SERVICES_DATA = [
         shortDesc: 'End-to-end supply, deployment and lifecycle management of hardware.',
         overview: 'We act as your Value-Added Reseller (VAR) for end-to-end hardware supply. From bulk rollout of laptops and servers to OS imaging and warranty handling, we manage the entire lifecycle of your enterprise devices.',
         technologies: ['HP', 'Dell', 'Lenovo', 'Apple', 'APC/UPS'],
-        expertise: ['Bulk Rollout', 'OS Imaging', 'Warranty Handling', 'Lifecycle Management'],
+        expertise: ['Bulk Hardware Procurement', 'OS Imaging & Configuration', 'Enterprise Device Deployment', 'Warranty & RMA Handling', 'Asset Tracking & Inventory', 'Lifecycle & Secure Disposal'],
         workflow: [
             { step: "01", title: "Procurement Strategy", desc: "We leverage OEM partnerships to source high-performance hardware tailored to your specific needs.", deliverable: "Hardware Procurement Plan" },
             { step: "02", title: "Staging & Imaging", desc: "Devices are pre-configured with your standard operating environment (SOE) and security policies.", deliverable: "Ready-to-Deploy Assets" },
@@ -256,7 +256,7 @@ export const SERVICES_DATA = [
         shortDesc: 'Licensing solutions for M365, Workspace, Adobe, and endpoint security.',
         overview: 'Simplify compliance and procurement with our comprehensive software licensing solutions. We handle licensing for Microsoft 365, Google Workspace, Adobe Creative Cloud, and endpoint security tools, ensuring you stay compliant and cost-optimized.',
         technologies: ['Microsoft 365', 'Google Workspace', 'Adobe Creative Cloud', 'VMware'],
-        expertise: ['M365 / Google Workspace Licensing', 'Security & Antivirus Licensing', 'Server OS & Virtualization', 'Backup Tools Licensing'],
+        expertise: ['M365 & Google Workspace Licensing', 'Security & Antivirus Licensing', 'Server OS & Virtualization', 'Backup & DR Licensing', 'Compliance & License Audits', 'Renewal & Cost Optimization'],
         workflow: [
             { step: "01", title: "Inventory Audit", desc: "We conduct a thorough audit of your current software assets to identify redundancy and non-compliance.", deliverable: "Licensing Gap Analysis" },
             { step: "02", title: "Strategy Optimization", desc: "We recommend the most cost-effective licensing models based on your actual usage patterns.", deliverable: "Optimization Roadmap" },
@@ -275,7 +275,8 @@ export const SERVICES_DATA = [
         shortDesc: 'Custom web platforms and mobile apps powered by modern frameworks.',
         overview: 'We build digital experiences that engage and convert. Our development team creates custom web platforms and mobile applications using modern frameworks, ensuring high performance, responsive design, and intuitive user experiences tailored to your business goals.',
         technologies: ['React', 'Node.js', 'Flutter', 'React Native', 'AWS'],
-        expertise: ['Custom Web Applications', 'Mobile App Development', 'Digital Platforms', 'UI/UX Design'],
+        expertise: ['Custom Web Applications', 'Mobile App Development', 'Scalable Backend Systems', 'UI/UX Design & Prototyping', 'API & System Integrations', 'CI/CD & Cloud Deployment'
+        ],
         workflow: [
             { step: "01", title: "Discovery & UX", desc: "We define user personas and business goals to create interactive wireframes mapping the user journey.", deliverable: "High-Fidelity Prototypes" },
             { step: "02", title: "Agile Development", desc: "Our full-stack team builds robust, scalable applications using modern frameworks and modular architecture.", deliverable: "Beta Application Build" },
@@ -294,7 +295,7 @@ export const SERVICES_DATA = [
         shortDesc: 'Business intelligence, analytics pipelines and integrated ERP/CRM systems.',
         overview: 'Transform data into your most valuable asset. We implement Business Intelligence (BI) dashboards, data analytics pipelines, and integrated ERP/CRM systems that help organizations forecast trends, optimize operations, and make smarter decisions.',
         technologies: ['Power BI', 'Tableau', 'Salesforce', 'SAP', 'SQL'],
-        expertise: ['BI Dashboards', 'Data Analytics Pipelines', 'ERP/CRM Integration', 'Predictive Modeling'],
+        expertise: ['BI Dashboards & Reporting', 'Data Analytics Pipelines', 'ERP System Implementation', 'CRM Integration', 'Predictive Analytics', 'Decision-Driven Automation'],
         workflow: [
             { step: "01", title: "Data Ingestion", desc: "We consolidate data from disparate sources into a unified warehouse, ensuring data integrity.", deliverable: "Unified Data Schema" },
             { step: "02", title: "Analytical Modeling", desc: "We apply advanced statistical models to extract meaningful patterns and trends from your raw data.", deliverable: "Data Analysis Model" },
@@ -313,7 +314,7 @@ export const SERVICES_DATA = [
         shortDesc: 'Strategic advisory with full IT operations management and lifecycle planning.',
         overview: 'Navigate the complex technology landscape with confidence. Our IT consultancy services provide strategic advisory, infrastructure planning, and operations management to align your technology roadmap with your long-term business goals.',
         technologies: ['IT Strategy', 'Digital Transformation', 'Risk Management'],
-        expertise: ['IT Strategy & Roadmap', 'Operations Management', 'Infrastructure Planning', 'Digital Transformation'],
+        expertise: ['IT Strategy & Roadmapping', 'Digital Transformation Advisory', 'Infrastructure Planning', 'Operations & Cost Optimization', 'Risk & Compliance Management', 'Vendor & Technology Selection'],
         workflow: [
             { step: "01", title: "Strategic Assessment", desc: "We evaluate your current IT maturity, identifying gaps between capabilities and business objectives.", deliverable: "IT Maturity Scorecard" },
             { step: "02", title: "Roadmap Formulation", desc: "We define a phased strategy to modernize your infrastructure, detailing technology selection.", deliverable: "3-Year Strategic Roadmap" },
@@ -332,7 +333,12 @@ export const SERVICES_DATA = [
         shortDesc: 'Results-focused digital growth through SEO/SEM, social media, and ads.',
         overview: 'Grow your digital footprint. Our results-focused digital marketing services encompass SEO/SEM, social media strategy, performance advertising, and automation to drive traffic, leads, and brand awareness.',
         technologies: ['Google Ads', 'Facebook Ads', 'SEO Tools', 'Analytics'],
-        expertise: ['SEO/SEM', 'Paid Campaigns', 'Social Media Strategy', 'Growth Hacking'],
+        expertise: ['SEO & SEM Strategy',
+            'Paid Advertising Campaigns',
+            'Social Media Management',
+            'Marketing Automation',
+            'Analytics & Performance Tracking',
+            'Brand Growth Optimization'],
         workflow: [
             { step: "01", title: "SEO Audit", desc: "We perform a deep dive into your market position to identify growth opportunities.", deliverable: "Competitor Analysis Report" },
             { step: "02", title: "Strategy Formulation", desc: "We develop a comprehensive marketing plan tailored to your target audience and KPIs.", deliverable: "Digital Strategy Deck" },
@@ -351,7 +357,14 @@ export const SERVICES_DATA = [
         shortDesc: 'Brand-centric visual design and production using professional creative tools.',
         overview: 'Visuals that speak louder than words. We provide brand-centric graphic design and video editing services, creating professional marketing materials, brand assets, and digital content that captivate your audience.',
         technologies: ['Adobe Creative Cloud', 'Premiere Pro', 'After Effects', 'Figma'],
-        expertise: ['Graphics Design', 'Video Editing', 'Brand Assets', 'Motion Graphics'],
+        expertise: [
+            'Brand Identity Design',
+            'Marketing Collateral Design',
+            'Video Editing & Motion Graphics',
+            'UI & Digital Creatives',
+            'Social Media Visual Assets',
+            'Professional Content Production'
+        ],
         workflow: [
             { step: "01", title: "Creative Concept", desc: "We brainstorm and storyboard unique visual concepts that align with your brand identity.", deliverable: "Mood Boards" },
             { step: "02", title: "Design Production", desc: "Our designers bring concepts to life using industry-standard tools for high-fidelity assets.", deliverable: "Draft Creative Assets" },
@@ -370,7 +383,14 @@ export const SERVICES_DATA = [
         shortDesc: 'Business acceleration through branding, digital setup, and automation.',
         overview: 'Accelerate your startup journey. We provide a complete enablement package including branding support, digital setup, workflow automation, and scalable tech infrastructure to help new businesses launch and grow fast.',
         technologies: ['Branding', 'Automation', 'Cloud Infrastructure', 'Digital Tools'],
-        expertise: ['Branding Support', 'Digital Setup', 'Process Automation', 'Tech Infrastructure'],
+        expertise: [
+            'Branding & Identity Setup',
+            'Digital Infrastructure Setup',
+            'Process & Workflow Automation',
+            'Cloud & Tool Enablement',
+            'Scalable Tech Architecture',
+            'Growth & Acceleration Support'
+        ],
         workflow: [
             { step: "01", title: "Foundation Setup", desc: "We establish your digital presence with domain, email, and brand identity setup.", deliverable: "Brand Identity Kit" },
             { step: "02", title: "Infrastructure Provision", desc: "We deploy essential cloud infrastructure and collaboration tools for immediate operations.", deliverable: "Cloud Environment Setup" },

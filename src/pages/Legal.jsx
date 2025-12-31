@@ -224,7 +224,9 @@ import { useTheme } from '../context/ThemeContext';
 const Legal = ({ type }) => {
     const { isDark } = useTheme();
 
-    useEffect(() => window.scrollTo(0, 0), []);
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [type]);
 
     const content = {
         privacy: {

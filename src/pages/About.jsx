@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import Reveal from '../components/ui/Reveal';
 import SectionHeader from '../components/ui/SectionHeader';
-import { Award, CheckCircle2, Leaf, Rocket, Shield, Users, Zap } from 'lucide-react';
+import { Award, CheckCircle2, Leaf, Rocket, Shield, ShieldCheck, Users, Zap } from 'lucide-react';
 import Button from '../components/ui/Button';
 // import Button from '../components/ui/Button';
 // import { ArrowRight } from 'lucide-react';
@@ -181,7 +181,9 @@ const About = ({ setPage }) => {
                         { title: "Innovation", icon: <Zap className="w-8 h-8" />, desc: "Redefining what’s possible with tech." },
                         { title: "Partnership", icon: <Users className="w-8 h-8" />, desc: "Long-term collaboration for mutual success." },
                         { title: "Excellence", icon: <Award className="w-8 h-8" />, desc: "Precision and quality in every delivery." },
-                        { title: "Sustainability", icon: <Leaf className="w-8 h-8" />, desc: "Environmentally responsible progress." }
+                        { title: "Sustainability", icon: <Leaf className="w-8 h-8" />, desc: "Environmentally responsible progress." },
+                        { title: "Trust & Security", icon: <ShieldCheck className="w-8 h-8" />, desc: "Secure, compliant and resilient systems built for business continuity." }
+
                     ].map((val, idx) => (
                         <Reveal key={idx} delay={idx * 100}>
                             <div className={`p-8 rounded-[2rem] border h-full transition-all duration-500 hover:-translate-y-2 hover-lift flex flex-col items-start ${isDark
@@ -244,7 +246,7 @@ const About = ({ setPage }) => {
                             <Button onClick={() => setPage('contact')}>Work With Us</Button>
                         </div>
                     </div>
-                    <div className={`p-8 rounded-[2.5rem] ${isDark ? 'bg-gradient-to-br from-slate-900 to-slate-950' : 'bg-gradient-to-br from-white to-slate-50 border border-slate-100'}`}>
+                    <div className={`p-8 rounded-[2.5rem] ${isDark ? 'bg-slate-900' : 'bg-white border border-slate-100'}`}>
                         <h3 className={`text-xl font-bold mb-6 ${isDark ? 'text-white' : 'text-slate-900'}`}>Why Clients Trust Us</h3>
                         <ul className="space-y-4">
                             {[

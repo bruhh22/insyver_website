@@ -201,7 +201,11 @@ const Home = ({ setPage, setServiceId }) => {
                                 </p>
                                 <div className="flex flex-col sm:flex-row justify-center gap-6">
                                     <Button
-                                        className="h-16 px-10 text-lg shadow-xl bg-white !text-blue-800 hover:bg-blue-50 hover:!text-white border-none transform hover:-translate-y-1 transition-transform"
+                                        className={` h-16 px-10 text-lg shadow-xl transform hover:-translate-y-1 transition-transform 
+                                            ${isDark
+                                                ? 'bg-white text-blue-800 border hover:bg-white hover:border-2 '
+                                                : 'bg-blue text-white border-1 border-white-200 hover:bg-blue-50 hover:border-2'
+                                            } `}
                                         onClick={() => setPage('contact')}
                                     >
                                         Start Your Digital Transformation

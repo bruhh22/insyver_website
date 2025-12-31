@@ -141,7 +141,7 @@ const ServiceDetail = ({ serviceId, setPage }) => {
                 </div>
 
                 {/* 4. BUSINESS IMPACT & CTA */}
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-16 items-center mb-12">
                     <div>
                         <h2 className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-slate-900'}`}>Why This Matters</h2>
                         <div className="space-y-6">

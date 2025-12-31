@@ -60,9 +60,9 @@ const Contact = () => {
             template_params: {
                 from_name: formData.name,
                 company_name: formData.company || "Not Provided",
-                reply_to: formData.email,
-                phone_number: formData.phone,
-                service_type: formData.service,
+                from_email: formData.email,
+                phone: formData.phone,
+                service: formData.service,
                 message: formData.message
             }
         };
@@ -237,8 +237,8 @@ const Contact = () => {
                         {/* --- Feedback Messages (Updated for Light/Dark Mode) --- */}
                         {status === 'success' && (
                             <div className={`p-4 rounded-xl border flex items-center justify-center gap-3 animate-fade-in ${isDark
-                                    ? 'bg-emerald-900/30 text-emerald-400 border-emerald-900/50'
-                                    : 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                                ? 'bg-emerald-900/30 text-emerald-400 border-emerald-900/50'
+                                : 'bg-emerald-50 text-emerald-700 border-emerald-200'
                                 }`}>
                                 <CheckCircle2 className="w-5 h-5" />
                                 <span>Inquiry sent successfully! We'll contact you within 24 hours.</span>
@@ -246,8 +246,8 @@ const Contact = () => {
                         )}
                         {status === 'error' && (
                             <div className={`p-4 rounded-xl border flex items-center justify-center gap-3 animate-fade-in ${isDark
-                                    ? 'bg-red-900/30 text-red-400 border-red-900/50'
-                                    : 'bg-red-50 text-red-700 border-red-200'
+                                ? 'bg-red-900/30 text-red-400 border-red-900/50'
+                                : 'bg-red-50 text-red-700 border-red-200'
                                 }`}>
                                 <AlertCircle className="w-5 h-5" />
                                 <span>Unable to send message. Please try again later.</span>
@@ -278,7 +278,9 @@ const Contact = () => {
 
                     {/* The Map Iframe*/}
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.877607730996!2d77.0134!3d28.4601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM2LjQiTiA3N8KwMDAnNDguMiJF!5e0!3m2!1sen!2sin!4v1630000000000!5m2!1sen!2sin"
+                        //src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.877607730996!2d77.0134!3d28.4601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM2LjQiTiA3N8KwMDAnNDguMiJF!5e0!3m2!1sen!2sin!4v1630000000000!5m2!1sen!2sin"
+                        //src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.1953685159874!2d77.01080499999999!3d28.484446799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19e1a87b22d9%3A0x552bb413767d2fae!2sInsyver%20Technologies%20(OPC)%20Pvt.%20Ltd.!5e1!3m2!1sen!2sin!4v1767176175085!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.837120216608!2d77.0082300745976!3d28.48445149079155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19e1a87b22d9%3A0x552bb413767d2fae!2sInsyver%20Technologies%20(OPC)%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1767176547620!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
