@@ -203,8 +203,8 @@ const Home = ({ setPage, setServiceId }) => {
                                     <Button
                                         className={` h-16 px-10 text-lg shadow-xl transform hover:-translate-y-1 transition-transform 
                                             ${isDark
-                                                ? 'bg-white text-blue-800 border hover:bg-white hover:border-2 '
-                                                : 'bg-blue text-white border-1 border-white-200 hover:bg-blue-50 hover:border-2'
+                                                ? 'bg-white !text-blue-900 border-2  hover:!bg-gray-100' // Added ! to force text color
+                                                : 'bg-white text-blue-900 border-2 border-transparent hover:bg-gray-100'   // Fixed 'bg-blue' typo
                                             } `}
                                         onClick={() => setPage('contact')}
                                     >
