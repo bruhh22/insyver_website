@@ -202,13 +202,14 @@ const Home = ({ setPage, setServiceId }) => {
                                 <div className="flex flex-col sm:flex-row justify-center gap-6">
                                     <Button
                                         className={` h-16 px-10 text-lg shadow-xl transform hover:-translate-y-1 transition-transform 
-                                            ${isDark
-                                                ? 'bg-white !text-blue-900 border-2  hover:!bg-gray-100' // Added ! to force text color
-                                                : 'bg-white text-blue-900 border-2 border-transparent hover:bg-gray-100'   // Fixed 'bg-blue' typo
-                                            } `}
+                                            bg-white border-2  hover:bg-gray-100 
+                                            isDark ? 'border-blue-900' : ""
+                                             `}
                                         onClick={() => setPage('contact')}
                                     >
-                                        Start Your Digital Transformation
+                                        <span className="text-blue-900 ">
+                                            Start Your Digital Transformation
+                                        </span>
                                     </Button>
                                     <Button
                                         variant="outline"
